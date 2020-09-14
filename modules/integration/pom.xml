@@ -19,7 +19,7 @@
     <parent>
         <groupId>org.wso2.is</groupId>
         <artifactId>identity-server-parent</artifactId>
-        <version>5.2.0</version>
+        <version>5.6.0</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -94,12 +94,19 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
     <dependencies>
         <dependency>
-            <groupId>org.wso2.carbon.identity</groupId>
+            <groupId>org.wso2.carbon.identity.inbound.auth.sts</groupId>
             <artifactId>org.wso2.carbon.identity.sts.passive.stub</artifactId>
         </dependency>
         <dependency>
